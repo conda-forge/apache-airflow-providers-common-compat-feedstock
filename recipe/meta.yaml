@@ -1,13 +1,13 @@
 {% set name = "apache-airflow-providers-common-compat" %}
-{% set version = "1.2.1" %}
+{% set version = "1.2.2" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_common_compat-{{ version }}.tar.gz
-  sha256: 31f5c52d1379e7a7ecea304ae54d516b0ece5e320e6e2bf5182259496e4013fd
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_common_compat-{{ version }}.tar.gz
+  sha256: 4094ef0226e5105516797cc19aa10bf76a1486ba81cb7e1ca478ed90d6b2a1cf
 
 build:
   noarch: python
@@ -16,11 +16,11 @@ build:
 
 requirements:
   host:
-    - python >=3.9,<4.dev0
-    - flit-core >=3.2,<4
+    - python {{ python_min }}
+    - flit-core ==3.10.1
     - pip
   run:
-    - python >=3.9,<4.dev0
+    - python >={{ python_min }}
     - apache-airflow >=2.8.0
 
 test:
@@ -29,6 +29,7 @@ test:
   commands:
     - pip check
   requires:
+    - python {{ python_min }}
     - pip
 
 about:
