@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-common-compat" %}
-{% set version = "1.5.1" %}
+{% set version = "1.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_common_compat-{{ version }}.tar.gz
-  sha256: 91f74168e8f21fddf9cd80eb9638e05d9e996eef71772158eb06a4ddef9ff5ff
+  sha256: f6aed86141041301d7df243f2b80bd94e12893971988db8ae1d54d4fb7763e21
 
 build:
   noarch: python
