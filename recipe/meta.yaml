@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-common-compat" %}
-{% set version = "1.8.0" %}
+{% set version = "1.9.0" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_common_compat-{{ version }}.tar.gz
-  sha256: 81218bfcd3f3c50f86df4bb265e0a38913829a7ce92c7de4a47c33b89c574d09
+  sha256: 805e86ea89b1d14ee5d7035e1baeed5d15dbb183d66b230d8b024f20208d029b
 
 build:
   noarch: python
@@ -21,6 +21,7 @@ requirements:
     - flit-core ==3.12.0
     - pip
   run:
+    - asgiref >=2.3.0
     - python >={{ python_min }}
     - apache-airflow >=2.10.0
 
