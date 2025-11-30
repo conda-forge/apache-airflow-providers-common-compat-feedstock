@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-common-compat" %}
-{% set version = "1.9.0" %}
+{% set version = "1.10.0" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_common_compat-{{ version }}.tar.gz
-  sha256: 805e86ea89b1d14ee5d7035e1baeed5d15dbb183d66b230d8b024f20208d029b
+  sha256: 941fbcf163557780c596a30b216e731463440b56d3ec66d6d6beb17ecfa77ebb
 
 build:
   noarch: python
@@ -22,7 +22,7 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - apache-airflow >=2.10.0
+    - apache-airflow >=2.11.0
     - asgiref >=2.3.0
 
 test:
@@ -38,7 +38,7 @@ about:
   home: https://airflow.apache.org/
   summary: Provider package apache-airflow-providers-common-compat for Apache Airflow
   license: Apache-2.0
-  license_file: 
+  license_file:
     - LICENSE
     - NOTICE
   license_family: Apache
