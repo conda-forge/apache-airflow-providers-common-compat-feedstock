@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_common_compat-${{ version }}.tar.gz
-  sha256: 941fbcf163557780c596a30b216e731463440b56d3ec66d6d6beb17ecfa77ebb
+  sha256: 04715659b9ef6912dd9508af15d852dca97b7283816fd0fc2b2772d503ae271b
 
 build:
   noarch: python
