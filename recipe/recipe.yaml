@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-common-compat
-  version: "1.11.0"
+  version: "1.12.0"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_common_compat-${{ version }}.tar.gz
-  sha256: 614c74c61688f3263e2e936b29f3878f993aea876f6256f2b1726b67633f1dd3
+  sha256: 32dc86d81330e2755dbb7bf18dcd3bd92bb9e745269eaad82e3e227f9be0097d
 
 build:
   noarch: python
