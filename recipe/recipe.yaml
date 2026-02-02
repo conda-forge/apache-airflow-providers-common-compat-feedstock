@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-common-compat
-  version: "1.13.0"
+  version: 1.13.0
 
 package:
   name: ${{ name|lower }}
@@ -24,11 +24,10 @@ requirements:
     - python >=${{ python_min }}
     - apache-airflow >=2.11.0
     - asgiref >=2.3.0
-
 tests:
   - python:
       imports:
-      - airflow.providers.common.compat
+        - airflow.providers.common.compat
       pip_check: true
       python_version: ${{ python_min }}.*
 
