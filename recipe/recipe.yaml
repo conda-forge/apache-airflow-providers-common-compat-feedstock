@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-common-compat
-  version: "1.12.0"
+  version: 1.13.0
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_common_compat-${{ version }}.tar.gz
-  sha256: 32dc86d81330e2755dbb7bf18dcd3bd92bb9e745269eaad82e3e227f9be0097d
+  sha256: 96bb87168e96ae2de0c5c05362c9d18becc213af2a2d0618dba18d28e8385d99
 
 build:
   noarch: python
@@ -24,11 +24,10 @@ requirements:
     - python >=${{ python_min }}
     - apache-airflow >=2.11.0
     - asgiref >=2.3.0
-
 tests:
   - python:
       imports:
-      - airflow.providers.common.compat
+        - airflow.providers.common.compat
       pip_check: true
       python_version: ${{ python_min }}.*
 
