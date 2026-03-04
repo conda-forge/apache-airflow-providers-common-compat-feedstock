@@ -24,6 +24,7 @@ requirements:
     - python >=${{ python_min }}
     - apache-airflow >=2.11.0
     - asgiref >=2.3.0
+
 tests:
   - python:
       imports:
