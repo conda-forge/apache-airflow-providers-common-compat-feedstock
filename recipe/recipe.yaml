@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-common-compat
-  version: "1.18.0"
+  version: 1.19.0
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_common_compat-${{ version }}.tar.gz
-  sha256: 30dbdd9a2bd931469b32c180792630f5e6b84e0e908dfc18da51b4beb7dd521f
+  sha256: 887d1f84907df0b01f5ce812bd8c84aeb196742abf7a5fbb78eb5ce60adcd2bd
 
 build:
   noarch: python
@@ -19,13 +19,12 @@ requirements:
   host:
     - python ${{ python_min }}.*
     - pip
-    - flit-core ==3.12.0
+    - flit-core ==4.0.2
   run:
     - python >=${{ python_min }}
     - apache-airflow >=2.11.0
-    # more restrictive for python >=3.14
+    # tightest of upstream's floors (python >=3.14)
     - asgiref >=3.11.1
-
 tests:
   - python:
       imports:
@@ -33,7 +32,7 @@ tests:
       pip_check: true
       python_version:
         - ${{ python_min }}.*
-        - "*"
+        - '*'
 
 about:
   homepage: https://github.com/apache/airflow/
