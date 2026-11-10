@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-common-compat
-  version: "1.23.0"
+  version: "1.23.1"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_common_compat-${{ version }}.tar.gz
-  sha256: 366182c246a989fcd18d9a85f16343005adc61b70493b31b545bb80ffced60da
+  sha256: b1c31d63a37ac0adf8f6683d86692eddc645c91955b7f4c446f5ded547559fec
 
 build:
   noarch: python
@@ -19,7 +19,7 @@ requirements:
   host:
     - python ${{ python_min }}.*
     - pip
-    - flit-core ==4.1.0
+    - flit-core ==4.2.0
   run:
     - python >=${{ python_min }}
     - apache-airflow >=2.11.0
